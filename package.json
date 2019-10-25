@@ -2,7 +2,9 @@
   "name": "portfoliio-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Ubsss.github.io/portfolio-site/",
   "dependencies": {
+    "jest": "^24.9.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"
@@ -10,7 +12,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "CI=true react-scripts test",
+    "test:coverage": "npm test -- --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
