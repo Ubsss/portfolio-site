@@ -15,7 +15,7 @@ import { updateSiteIsAwesome } from "../../actions/siteIsAwesomeActions";
 
 class Service extends Component {
   render() {
-    const { img, name, description, link } = this.props.coolFeature;
+    const { img, name, description } = this.props.coolFeature;
     return (
       <div
         className="col-12 col-sm-12 col-md-6 col-lg-3 d-inline-block  text-center"
@@ -29,17 +29,15 @@ class Service extends Component {
       >
         <div>
           <div>
-            <a href={link}>
-              <img
-                style={{
-                  boxShadow:
-                    "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
-                }}
-                className="img-thumbnail rounded m-2"
-                src={img}
-                alt="features"
-              />
-            </a>
+            <img
+              style={{
+                boxShadow:
+                  "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+              }}
+              className="img-thumbnail rounded m-2"
+              src={img}
+              alt="features"
+            />
           </div>
 
           <h4>{name}</h4>
@@ -70,19 +68,19 @@ class Services extends Component {
               style={{ height: 300 }}
             >
               <h2 className="section-heading text-uppercase mt-5">Services</h2>
+              <Products />
               <p className="section-subheading text-muted">
                 What makes us special.
               </p>
             </div>
           </div>
+
           <div className="row pb-4">
             {servicesFeature.map(feature => {
               return <Service key={feature.id} coolFeature={feature} />;
             })}
           </div>
         </div>
-        <hr />
-        <Products />
       </section>
     );
   }

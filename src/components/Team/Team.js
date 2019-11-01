@@ -13,7 +13,7 @@ class TEAMMEMBER extends Component {
         xs={4}
         md={3}
         lg={2}
-        className="d-inline-block text-center m-2 text-light"
+        className="d-inline-block text-center m-2 text-secondary"
         style={{
           borderRadius: 150,
           width: 150

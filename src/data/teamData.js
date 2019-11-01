@@ -4,13 +4,13 @@ const team = [
   {
     id: 1,
     img: profile,
-    name: "Kedar Brooks",
-    description: "Software Engineer"
+    name: "Uchechukwu Uboh",
+    description: "Full-Stack Developer"
   },
   {
     id: 2,
     img: profile,
-    name: "Uchechukwu Uboh",
+    name: "Kedar Brooks",
     description: "Software Engineer"
   }
 ];

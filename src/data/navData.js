@@ -19,7 +19,6 @@ const navLinks = [
     name: "Team",
     link: "#team"
   },
-
   {
     id: 5,
     name: "Contact",

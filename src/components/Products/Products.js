@@ -50,9 +50,7 @@ class Technologies extends Component {
       <div className="container justify-content-md-center ">
         <div className="row">
           <div className="col-lg-12 text-center h-100" style={{ height: 300 }}>
-            <p className="section-subheading text-muted">
-              Our revolutionary product.
-            </p>
+            <p className="section-subheading text-muted">Our products.</p>
           </div>
         </div>
         <div className="row pb-4">

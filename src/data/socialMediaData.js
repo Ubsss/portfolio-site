@@ -1,9 +1,9 @@
 import twitter from "../assets/social/twitter.svg";
 import instagram from "../assets/social/instagram.svg";
-// import facebook from "../assets/social/facebook.svg";
+import facebook from "../assets/social/facebook.svg";
 import linkedin from "../assets/social/linkedin.svg";
 
-const Projects = [
+const Socail = [
   {
     id: 1,
     img: twitter,
@@ -18,13 +18,12 @@ const Projects = [
     id: 3,
     img: linkedin,
     link: "https://www.linkedin.com/"
+  },
+  {
+    id: 4,
+    img: facebook,
+    link: "https://www.facebook.com/"
   }
-  //   ,
-  // {
-  //   id: 4,
-  //   img: facebook,
-  //   link: "https://www.facebook.com/"
-  // }
 ];
 
-export default Projects;
+export default Socail;

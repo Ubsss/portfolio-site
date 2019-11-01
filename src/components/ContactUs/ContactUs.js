@@ -9,6 +9,17 @@ Contains:
 
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import {
+  Container,
+  Form,
+  FormGroup,
+  FormControl,
+  FormLabel,
+  FormCheck,
+  Button,
+  Row,
+  Col
+} from "react-bootstrap";
 
 class Contact extends Component {
   render() {
@@ -23,18 +34,54 @@ class Contact extends Component {
           //   "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
         }}
       >
-        <div className="container justify-content-center ">
-          <div className="row">
-            <div className="col-lg-12 text-center h-100">
-              <h1 className="section-heading text-uppercase mt-5">
-                Contact Us
-              </h1>
-              <p className="section-subheading text-muted">
-                Let us know what you think.
-              </p>
-            </div>
-          </div>
-        </div>
+        <Container className="justify-content-center text-center">
+          <h1 className="section-heading text-uppercase mt-5">Contact Us</h1>
+          <p className="section-subheading text-muted">
+            Let us know what you think.
+          </p>
+          <Row>
+            <Col lg="6" className="text-center h-100">
+              <Form>
+                <Form.Group controlId="formName">
+                  <Form.Control
+                    type="email"
+                    placeholder="Your Name"
+                    size="lg"
+                  />
+                </Form.Group>
+
+                <Form.Group controlId="formEmail">
+                  <Form.Control
+                    type="password"
+                    placeholder="Your Email"
+                    size="lg"
+                  />
+                </Form.Group>
+                <Form.Group controlId="formPhone">
+                  <Form.Control
+                    type="phone"
+                    placeholder="Your Phone"
+                    size="lg"
+                  />
+                </Form.Group>
+              </Form>
+            </Col>
+            <Col lg="6" className="text-center h-100">
+              <Form.Group controlId="exampleForm.ControlTextarea1">
+                <Form.Control
+                  as="textarea"
+                  rows="6"
+                  placeholder="Your Message"
+                  size="lg"
+                />
+              </Form.Group>
+            </Col>
+          </Row>
+          {/* Might want to put the button in the form for submission */}
+          <Button variant="secondary" type="submit">
+            Message Us
+          </Button>
+        </Container>
       </section>
     );
   }

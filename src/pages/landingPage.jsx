@@ -8,6 +8,8 @@ import Fans from "../components/OurFans/OurFans";
 import Contact from "../components/ContactUs/ContactUs";
 import NAVBAR from "../components/NavBar/NavBar";
 import ABOUTUS from "../components/About Us/AboutUs";
+import PORTFOLIO from "../components/Portfolio/Portfolio";
+import SOCIAL from "../components/SocialMedia/SocialMedia";
 
 class LANDINGPAGE extends Component {
   render() {
@@ -18,6 +20,8 @@ class LANDINGPAGE extends Component {
         <hr />
         <Services />
         <hr />
+        <PORTFOLIO />
+        <hr />
         <ABOUTUS />
         <hr />
         <TEAM />
@@ -26,6 +30,7 @@ class LANDINGPAGE extends Component {
         <hr />
         <Contact />
         <hr />
+        <SOCIAL />
         <FOOTER />
       </>
     );

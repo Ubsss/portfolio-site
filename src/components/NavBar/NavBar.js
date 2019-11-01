@@ -14,6 +14,8 @@ import React, { Component } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import navLinks from "../../data/navData.js";
 import logo from "../../assets/battery-full-solid.svg";
+import logo1 from "../../assets/solid-stack.svg";
+import logo2 from "../../assets/transparent-stack.svg";
 
 class NAVBAR extends Component {
   state = { links: navLinks, isTop: true };
@@ -45,11 +47,11 @@ class NAVBAR extends Component {
           <Navbar.Brand href="#page-top">
             <img
               text="light"
-              src={logo}
-              width="150"
+              src={logo1}
+              width="100"
               height="60"
               className="d-inline-block"
-              alt="recyclage-logo"
+              alt="full-stock-logo"
             />
             Full-Stock
           </Navbar.Brand>
@@ -70,6 +72,7 @@ class NAVBAR extends Component {
   }
 }
 
+// implement smooth scrolling to section and at the right height
 class NAVBARLNKS extends Component {
   render() {
     const { name, link } = this.props.navlink;

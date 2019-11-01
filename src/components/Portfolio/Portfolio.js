@@ -4,21 +4,21 @@ Contains:
 */
 
 import React, { Component } from "react";
-import projects from "../../data/projects.js";
-import { Container, Row, Col, Image, Nav } from "react-bootstrap";
+import projects from "../../data/portfolioData.js";
+import { Container, Row, Col, Image, Nav, Card } from "react-bootstrap";
 
 class PROJECT extends Component {
   render() {
-    const { img, link } = this.props.Profile;
+    const { img, link, name, description } = this.props.Profile;
 
     return (
-      <Nav.Link href={link} className=" d-inline-block m-2">
-        <Image
-          src={img}
-          alt="social-media-profile"
-          style={{ width: 40, height: 40 }}
-        />
-      </Nav.Link>
+      <Card className="d-inline-block m-1 d-inline-block  text-center">
+        <Card.Img variant="top" src={img} />
+        <Card.Body>
+          <Card.Title>{name}</Card.Title>
+          <Card.Text>{description}</Card.Text>
+        </Card.Body>
+      </Card>
     );
   }
 }
@@ -26,15 +26,31 @@ class PROJECT extends Component {
 class PORTFOLIO extends Component {
   render() {
     return (
-      <Container>
-        <Row className=" text-center">
-          <Col>
-            {projects.map(profile => {
-              return <PROJECT key={profile.id} Profile={profile} />;
-            })}
-          </Col>
-        </Row>
-      </Container>
+      <section
+        className="page-section"
+        id="portfolio"
+        style={{ borderRadius: 25 }}
+      >
+        <Container className="justify-content-center">
+          <Row>
+            <Col className="text-center">
+              <h1 className="section-heading text-uppercase mt-5 text-dark">
+                Portfolio
+              </h1>
+              <p className="section-subheading text-secondary">
+                Some of our work.
+              </p>
+            </Col>
+          </Row>
+          <Row className=" text-center">
+            <Col>
+              {projects.map(profile => {
+                return <PROJECT key={profile.id} Profile={profile} />;
+              })}
+            </Col>
+          </Row>
+        </Container>
+      </section>
     );
   }
 }

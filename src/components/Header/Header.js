@@ -7,7 +7,7 @@ class HEADER extends Component {
       <Container
         fluid
         style={{
-          height: 600
+          height: 820
         }}
       >
         <Row className="text-center h-100">
