@@ -5,11 +5,18 @@ Contains:
 
 import React, { Component } from "react";
 import projects from "../../data/portfolioData.js";
-import { Container, Row, Col, Image, Nav, Card } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Button,
+  ButtonToolbar
+} from "react-bootstrap";
 
 class PROJECT extends Component {
   render() {
-    const { img, link, name, description } = this.props.Profile;
+    const { img, name, description } = this.props.Profile;
 
     return (
       <Card className="d-inline-block m-1 d-inline-block  text-center">
