@@ -1,21 +1,45 @@
 import React, { Component } from "react";
-import { Modal, Button, ButtonToolbar } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 
 class ModalComponent extends Component {
+  state = {
+    show: false,
+    setShow: false
+  };
+
+  handleClose = () => {
+    this.setState({
+      setShow: false
+    });
+  };
+
+  handleShow = () => {
+    this.setState({
+      setShow: true
+    });
+  };
   render() {
     return (
-      <Modal showOverlay={true}>
-        <Modal.Header>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>Hello there, this is a modal</p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button>Cancel</Button>
-          <Button btnStyle="primary">Save</Button>
-        </Modal.Footer>
-      </Modal>
+      <>
+        <Button variant="primary" onClick={handleShow}>
+          Launch this specificmodal
+        </Button>
+
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleClose}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </>
     );
   }
 }

@@ -10,7 +10,7 @@ import NAVBAR from "../components/NavBar/NavBar";
 import ABOUTUS from "../components/About Us/AboutUs";
 import PORTFOLIO from "../components/Portfolio/Portfolio";
 import SOCIAL from "../components/SocialMedia/SocialMedia";
-import MODAL from "../components/Modal/Modal";
+// import MODAL from "../components/Modal/Modal";
 
 class LANDINGPAGE extends Component {
   render() {
@@ -21,7 +21,7 @@ class LANDINGPAGE extends Component {
         <hr />
         <Services />
         <hr />
-        <MODAL />
+        {/* <MODAL /> */}
         <hr />
         <PORTFOLIO />
         <hr />
