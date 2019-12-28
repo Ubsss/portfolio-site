@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-class AboutUS extends Component {
+class AboutMe extends Component {
   render() {
     return (
       <section
@@ -17,10 +17,8 @@ class AboutUS extends Component {
         <div className="container justify-content-center ">
           <div className="row">
             <div className="col-lg-12 text-center h-100">
-              <h1 className="section-heading text-uppercase mt-5">About Us</h1>
-              <p className="section-subheading text-muted">
-                This is who we are.
-              </p>
+              <h1 className="section-heading text-uppercase mt-5">About Me</h1>
+              <p className="section-subheading text-muted">This is who I am.</p>
             </div>
           </div>
         </div>
@@ -29,4 +27,4 @@ class AboutUS extends Component {
   }
 }
 
-export default AboutUS;
+export default AboutMe;

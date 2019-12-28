@@ -13,9 +13,9 @@ Nav bar using React-Bootstrap
 import React, { Component } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import navLinks from "../../data/navData.js";
-import logo from "../../assets/battery-full-solid.svg";
+// import logo from "../../assets/battery-full-solid.svg";
 import logo1 from "../../assets/solid-stack.svg";
-import logo2 from "../../assets/transparent-stack.svg";
+// import logo2 from "../../assets/transparent-stack.svg";
 
 class NAVBAR extends Component {
   state = { links: navLinks, isTop: true };

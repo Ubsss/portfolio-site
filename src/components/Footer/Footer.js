@@ -8,8 +8,12 @@ class FOOTER extends Component {
         <Row className="text-center">
           <Col>
             Copyright © Full-Stock Development 2019. Designed by{" "}
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              Full-Stock
+            <a
+              href="https://www.linkedin.com/in/uchechukwu-uboh-31030196/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Uchechukwu Uboh
             </a>
           </Col>
         </Row>

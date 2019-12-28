@@ -9,19 +9,9 @@ Contains:
 
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import {
-  Container,
-  Form,
-  FormGroup,
-  FormControl,
-  FormLabel,
-  FormCheck,
-  Button,
-  Row,
-  Col
-} from "react-bootstrap";
+import { Container, Form, Button, Row, Col } from "react-bootstrap";
 
-class Contact extends Component {
+class ContactMe extends Component {
   render() {
     return (
       <section
@@ -35,9 +25,9 @@ class Contact extends Component {
         }}
       >
         <Container className="justify-content-center text-center">
-          <h1 className="section-heading text-uppercase mt-5">Contact Us</h1>
+          <h1 className="section-heading text-uppercase mt-5">Contact Me</h1>
           <p className="section-subheading text-muted">
-            Let us know what you think.
+            Let me know how I could help you.
           </p>
           <Row>
             <Col lg="6" className="text-center h-100">
@@ -87,4 +77,4 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default ContactMe;

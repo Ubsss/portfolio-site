@@ -5,14 +5,7 @@ Contains:
 
 import React, { Component } from "react";
 import projects from "../../data/portfolioData.js";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  Button,
-  ButtonToolbar
-} from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 class PROJECT extends Component {
   render() {
