@@ -1,15 +1,3 @@
-/*
-Nav bar using React-Bootstrap
-    Contains: 
-    - Left > Logo
-    - Rigt > Links to:
-        - Recyclage section
-        - Support section
-        - Team section
-        - Social Media section
-        - Contact section
-*/
-
 import React, { Component } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import navLinks from "../../data/navData.js";

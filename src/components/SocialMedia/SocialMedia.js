@@ -11,7 +11,12 @@ class Profile extends Component {
   render() {
     const { img, link } = this.props.Profile;
     return (
-      <Nav.Link href={link} className="d-inline-block m-1 p-1">
+      <Nav.Link
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="d-inline-block m-1 p-1"
+      >
         <Image
           src={img}
           alt="social-media-profile"

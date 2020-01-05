@@ -18,19 +18,21 @@ class LANDINGPAGE extends Component {
         <NAVBAR />
         <HEADER />
         <hr />
-        <RESUME />
+        <ABOUTME />
         <hr />
         <SERVICES />
         <hr />
+        <RESUME />
+        <hr />
         <PORTFOLIO />
         <hr />
-        <ABOUTME />
-        <hr />
+
         <ContactMe />
         <hr />
+        <BLOG />
         <SOCIAL />
         <hr />
-        <BLOG />
+
         <FOOTER />
       </>
     );

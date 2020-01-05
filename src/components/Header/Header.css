@@ -1,0 +1,22 @@
+/* class created for name */
+.Header-name {
+  text-transform: uppercase;
+  font-size: 50px;
+  color: lightgray;
+}
+
+.Header-photo {
+  background-image: url("../../assets/profilePhoto2.jpeg");
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.Header {
+  height: 800px;
+}
+
+.Header-text {
+  margin-top: 40%;
+}
