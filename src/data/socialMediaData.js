@@ -1,28 +1,22 @@
-import twitter from "../assets/social/twitter.svg";
-import instagram from "../assets/social/instagram.svg";
-import facebook from "../assets/social/facebook.svg";
 import linkedin from "../assets/social/linkedin.svg";
+import stack from "../assets/social/stack.svg";
+import github from "../assets/social/github.svg";
 
 const Socail = [
   {
     id: 1,
-    img: twitter,
-    link: "https://twitter.com/"
+    img: linkedin,
+    link: "https://www.linkedin.com/in/uchechukwu-uboh-31030196/"
   },
   {
     id: 2,
-    img: instagram,
-    link: "https://www.instagram.com/"
+    img: github,
+    link: "https://github.com/Ubsss/"
   },
   {
     id: 3,
-    img: linkedin,
-    link: "https://www.linkedin.com/"
-  },
-  {
-    id: 4,
-    img: facebook,
-    link: "https://www.facebook.com/"
+    img: stack,
+    link: "https://stackoverflow.com/users/10851341/ubsss/"
   }
 ];
 
