@@ -1,15 +1,10 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import SERVICES from "../components/Services/Services";
 import HEADER from "../components/Header/Header";
 import FOOTER from "../components/Footer/Footer.js";
 import ContactMe from "../components/ContactMe/ContactMe";
 import NAVBAR from "../components/NavBar/NavBar";
 import ABOUTME from "../components/AboutMe/AboutMe";
-import PORTFOLIO from "../components/Portfolio/Portfolio";
-import SOCIAL from "../components/SocialMedia/SocialMedia";
-import RESUME from "../components/Resume/Resume";
-import BLOG from "../components/Blog/Blog";
 
 class LANDINGPAGE extends Component {
   render() {
@@ -20,19 +15,8 @@ class LANDINGPAGE extends Component {
         <hr />
         <ABOUTME />
         <hr />
-        <SERVICES />
-        <hr />
-        <RESUME />
-        <hr />
-        <PORTFOLIO />
-        <hr />
-
         <ContactMe />
         <hr />
-        <BLOG />
-        <SOCIAL />
-        <hr />
-
         <FOOTER />
       </>
     );

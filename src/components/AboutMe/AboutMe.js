@@ -12,7 +12,7 @@ class About extends Component {
         border="white"
         style={{
           borderRadius: 25,
-          width: "14rem"
+          width: "15rem"
           // boxShadow:
           //   "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
         }}
@@ -23,8 +23,10 @@ class About extends Component {
           style={{ width: 100, height: 100 }}
         />
         <Card.Body>
-          <Card.Title>{name}</Card.Title>
-          <Card.Subtitle className="text-muted">{description}</Card.Subtitle>
+          <Card.Title className="Card-title">{name}</Card.Title>
+          <Card.Subtitle className="text-muted Card-text">
+            {description}
+          </Card.Subtitle>
         </Card.Body>
       </Card>
     );

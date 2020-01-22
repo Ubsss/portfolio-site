@@ -7,13 +7,13 @@ class FOOTER extends Component {
       <Container fluid sticky="bottom" className="bg-light text-dark p-4">
         <Row className="text-center">
           <Col>
-            Copyright © Full-Stock Development 2019. Designed by{" "}
+            Designed and built with &#9825; by{" "}
             <a
               href="https://www.linkedin.com/in/uchechukwu-uboh-31030196/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Uchechukwu Uboh
+              Uchechukwu Uboh.
             </a>
           </Col>
         </Row>

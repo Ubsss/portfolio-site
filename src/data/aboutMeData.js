@@ -27,7 +27,7 @@ const About = [
   {
     id: 4,
     icon: fun,
-    name: "Fun",
+    name: "Creative",
     description:
       "I make sure to enjoy the process and never take myself too seriously."
   }
