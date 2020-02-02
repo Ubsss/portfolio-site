@@ -1,10 +1,5 @@
-/*
-Contains:
-    - Provide social media information
-*/
-
 import React, { Component } from "react";
-import Social from "../../data/socialMediaData";
+import Social from "./socialMediaData";
 import { Container, Row, Col, Image, Nav } from "react-bootstrap";
 
 class Profile extends Component {

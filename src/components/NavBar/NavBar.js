@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import navLinks from "../../data/navData.js";
+import navLinks from "./navData.js";
 // import logo from "../../assets/battery-full-solid.svg";
-import logo1 from "../../assets/solid-stack.svg";
+// import logo1 from "../../assets/solid-stack.svg";
 // import logo2 from "../../assets/transparent-stack.svg";
 
 class NAVBAR extends Component {
@@ -33,15 +33,15 @@ class NAVBAR extends Component {
       >
         <Container fluid>
           <Navbar.Brand href="#page-top">
-            <img
+            {/* <img
               text="light"
               src={logo1}
               width="100"
               height="60"
               className="d-inline-block"
               alt="full-stock-logo"
-            />
-            Full-Stock
+            /> */}
+            Uboh's Site
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse

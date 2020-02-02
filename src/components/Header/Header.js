@@ -6,14 +6,15 @@ import SOCIAL from "../SocialMedia/SocialMedia";
 class HEADER extends Component {
   render() {
     return (
-      <Container className="Header-photo Header" fluid>
+      <Container className="Header-photo Header" id="top" fluid>
         <Row className=" h-100">
           <Col className="d-flex align-items-center justify-content-center text-center col-12 col-sm-12 col-md-6 col-lg-6  bg-white">
             <div>
-              <h4 className="text-secondary">My name is</h4>
-              <h1 className=" Header-name">Uchechukwu Uboh</h1>
+              <h1 className=" Header-name">
+                Full-Stack Developer, UX Designer and Mentor
+              </h1>
               <h4 className="text-secondary">
-                and I am a full-stack web developer.
+                I design, build and deploy exciting customer experiences.
               </h4>
               <SOCIAL />
             </div>

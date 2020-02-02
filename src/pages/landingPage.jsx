@@ -5,6 +5,7 @@ import FOOTER from "../components/Footer/Footer.js";
 import ContactMe from "../components/ContactMe/ContactMe";
 import NAVBAR from "../components/NavBar/NavBar";
 import ABOUTME from "../components/AboutMe/AboutMe";
+import SKILL from "../components/Skills/Skills";
 
 class LANDINGPAGE extends Component {
   render() {
@@ -12,9 +13,8 @@ class LANDINGPAGE extends Component {
       <>
         <NAVBAR />
         <HEADER />
-        <hr />
         <ABOUTME />
-        <hr />
+        <SKILL />
         <ContactMe />
         <hr />
         <FOOTER />

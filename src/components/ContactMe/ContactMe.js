@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import { connect } from "react-redux";
-import { nodemailer } from "nodemailer";
+
 import "./ContactMe.css";
 
 class ContactMe extends Component {
   handleMessageResend = () => {
-    this.props.updateMessageIsSent(false);
+    this.props.updateContactMeState(false);
   };
 
   handleNameChange = e => {
@@ -30,31 +30,37 @@ class ContactMe extends Component {
 
     console.log(this.props.messageMessage);
 
-    const transporter = nodemailer.createTransport({
-      service: "Yahoo",
-      auth: {
-        user: process.env.REACT_APP_BOT_EMAIL_USER,
-        pass: process.env.REACT_APP_BOT_EMAIL_PASSWORD
-      }
-    });
+    let sendMessageURL = process.env.REACT_APP_SEND_MESSAGE_URL;
 
-    const mailOptions = {
-      from: process.env.REACT_APP_BOT_EMAIL_USE,
-      to: process.env.REACT_APP_PERSONAL_EMAIL,
-      subject: this.props.messageSubject,
-      text: `Name: ${this.props.messageName}
-             Email: ${this.props.messageEmail}
-             Message: ${this.props.messageMessage}`
-    };
+    // add verfication token to api call
 
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.log(error);
-      } else {
-        this.props.updateMessageIsSent(true);
-        console.log("Email sent: " + info.response);
-      }
-    });
+    // const transporter = nodemailer.createTransport({
+    //   service: "Yahoo",
+    //   auth: {
+    //     user: process.env.REACT_APP_BOT_EMAIL_USER,
+    //     pass: process.env.REACT_APP_BOT_EMAIL_PASSWORD
+    //   }
+    // });
+
+    // const mailOptions = {
+    //   from: process.env.REACT_APP_BOT_EMAIL_USE,
+    //   to: process.env.REACT_APP_PERSONAL_EMAIL,
+    //   subject: this.props.messageSubject,
+    //   text: `Name: ${this.props.messageName}
+    //          Email: ${this.props.messageEmail}
+    //          Message: ${this.props.messageMessage}`
+    // };
+
+    // transporter.sendMail(mailOptions, (error, info) => {
+    //   if (error) {
+    //     console.log(error);
+    //   } else {
+    //     this.props.updateContactMeState(true);
+    //     console.log("Email sent: " + info.response);
+    //   }
+    // });
+
+    this.props.updateContactMeState(true);
   };
 
   render() {
@@ -163,9 +169,9 @@ const mapStateToProps = state => {
 // allow component to manipulate store
 const mapDispatchToProps = dispatch => {
   return {
-    updateMessageIsSent: newVal => {
+    updateContactMeState: newVal => {
       dispatch({
-        type: "UPDATE_MESSAGE_IS_SENT",
+        type: "UPDATE_CONTACT_ME_STATE",
         value: newVal
       });
     },

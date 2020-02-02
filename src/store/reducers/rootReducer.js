@@ -1,6 +1,13 @@
 // Only put state that is shared amongst components
 const initState = {
-  messageIsSent: false,
+  /**
+   * Contact me possible states:
+   * - Message not yet sent
+   * - Message sending error
+   * - Message is sending or loading
+   * -
+   */
+  contactMeState: false,
   messageName: "",
   messageEmail: "",
   messageSubject: "",
@@ -10,7 +17,7 @@ const initState = {
 const rootReducer = (state = initState, action) => {
   // set reducer actions
   switch (action.type) {
-    case "UPDATE_MESSAGE_IS_SENT":
+    case "UPDATE_CONTACT_ME_STATE":
       return {
         ...state,
         messageIsSent: action.value

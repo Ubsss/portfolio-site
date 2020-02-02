@@ -1,6 +1,6 @@
-import linkedin from "../assets/social/linkedin.svg";
-import stack from "../assets/social/stack.svg";
-import github from "../assets/social/github.svg";
+import linkedin from "./linkedin.svg";
+import stack from "./stack.svg";
+import github from "./github.svg";
 
 const Socail = [
   {
