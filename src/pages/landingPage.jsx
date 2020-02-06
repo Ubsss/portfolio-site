@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import HEADER from "../components/Header/Header";
 import FOOTER from "../components/Footer/Footer.js";
-import ContactMe from "../components/ContactMe/ContactMe";
+import CONTACTME from "../components/ContactMe/ContactMe";
 import NAVBAR from "../components/NavBar/NavBar";
 import ABOUTME from "../components/AboutMe/AboutMe";
 import SKILL from "../components/Skills/Skills";
+import EXPERIENCE from "../components/Experience/Experience";
+import PROJECTS from "../components/Projects/Projects";
 
 class LANDINGPAGE extends Component {
   render() {
@@ -15,7 +17,9 @@ class LANDINGPAGE extends Component {
         <HEADER />
         <ABOUTME />
         <SKILL />
-        <ContactMe />
+        <EXPERIENCE />
+        <PROJECTS />
+        <CONTACTME />
         <hr />
         <FOOTER />
       </>

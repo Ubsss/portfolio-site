@@ -15,7 +15,7 @@ class Profile extends Component {
         <Image
           src={img}
           alt="social-media-profile"
-          style={{ width: 30, height: 30 }}
+          style={{ width: 40, height: 40 }}
         />
       </Nav.Link>
     );

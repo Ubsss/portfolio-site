@@ -1,21 +1,26 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import "./Skills.css";
-import { ToolsandSkills } from "./skillsData";
+import "./Projects.css";
+import { ProjectList } from "./projectsData.js";
 
-class Skill extends Component {
+class Project extends Component {
   render() {
-    const { icon, name } = this.props.Item;
+    const { icon, name, description, link } = this.props.Item;
     return (
       <Card
         className="col-6 col-sm-6 col-md-6 col-lg-6 d-inline-block text-center "
         border="white"
         style={{
           borderRadius: 25,
-          width: "10rem"
+          width: "14rem"
         }}
       >
-        <Card.Img variant="top" src={icon} style={{ width: 80, height: 80 }} />
+        <Card.Img
+          className="hover01"
+          variant="top"
+          src={icon}
+          style={{ width: 140, height: 140 }}
+        />
         <Card.Body>
           <Card.Text className="Card-text text-secondary">{name}</Card.Text>
         </Card.Body>
@@ -24,25 +29,24 @@ class Skill extends Component {
   }
 }
 
-class Skills extends Component {
+class Projects extends Component {
   render() {
     return (
       <Container
-        className="Skills-section bg-white text-center p-4"
-        id="skills"
+        className="Projects-section bg-white text-center p-4"
+        id="projects"
       >
         <Row>
           <Col>
-            <h1 className="section-heading Skills-section-heading">Skills</h1>
             <p className="Card-text text-secondary">
-              Here are some of the major skills and tools I picked up over the
-              years. Want to see more? Visit my{" "}
+              A few of my favorite projects that made it to GitHub are below.
+              Want to see more? Visit my{" "}
               <a
-                href="https://www.linkedin.com/in/uchechukwu-uboh-31030196/"
+                href="https://github.com/Ubsss"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Linkedin
+                GitHub
               </a>{" "}
               profile.
             </p>
@@ -50,8 +54,8 @@ class Skills extends Component {
         </Row>
         <Row>
           <Col>
-            {ToolsandSkills.map(item => {
-              return <Skill key={item.id} Item={item} />;
+            {ProjectList.map(item => {
+              return <Project key={item.id} Item={item} />;
             })}
           </Col>
         </Row>
@@ -60,4 +64,4 @@ class Skills extends Component {
   }
 }
 
-export default Skills;
+export default Projects;

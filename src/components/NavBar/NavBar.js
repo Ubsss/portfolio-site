@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Row, Col, Image } from "react-bootstrap";
 import navLinks from "./navData.js";
 // import logo from "../../assets/battery-full-solid.svg";
-// import logo1 from "../../assets/solid-stack.svg";
-// import logo2 from "../../assets/transparent-stack.svg";
+import "./NavBar.css";
+import ToTopArrow from "./toTopArrow.svg";
 
 class NAVBAR extends Component {
   state = { links: navLinks, isTop: true };
@@ -24,25 +24,9 @@ class NAVBAR extends Component {
 
   render() {
     return (
-      <Navbar
-        sticky="top"
-        // darken navbar on scroll
-        bg={this.state.isTop ? "transparent" : "light"}
-        expand="lg"
-        variant="light"
-      >
-        <Container fluid>
-          <Navbar.Brand href="#page-top">
-            {/* <img
-              text="light"
-              src={logo1}
-              width="100"
-              height="60"
-              className="d-inline-block"
-              alt="full-stock-logo"
-            /> */}
-            Uboh's Site
-          </Navbar.Brand>
+      <Navbar expand="lg" variant="light">
+        <Container id="top" fluid>
+          <Navbar.Brand href="#page-top"></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
@@ -55,6 +39,22 @@ class NAVBAR extends Component {
             </Nav>
           </Navbar.Collapse>
         </Container>
+        <Row>
+          <Col>
+            {/* button to go to top of screen */}
+            {this.state.isTop ? null : (
+              <a href="#top">
+                <Image
+                  src={ToTopArrow}
+                  rounded
+                  alt="Scroll to top"
+                  className="jumpToTopButton col-xs-"
+                  style={{ width: 50, height: 50 }}
+                />
+              </a>
+            )}
+          </Col>
+        </Row>
       </Navbar>
     );
   }

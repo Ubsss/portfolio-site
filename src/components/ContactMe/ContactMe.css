@@ -12,6 +12,10 @@
   border-bottom: 2px solid tomato;
 }
 
+.Card-text {
+  font-size: 18px;
+}
+
 .Form-button {
   border: 2px solid tomato;
 }

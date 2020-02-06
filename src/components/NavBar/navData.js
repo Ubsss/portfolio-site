@@ -11,6 +11,16 @@ const navLinks = [
   },
   {
     id: 3,
+    name: "Experience",
+    link: "#experience"
+  },
+  {
+    id: 4,
+    name: "Projects",
+    link: "#projects"
+  },
+  {
+    id: 5,
     name: "Contact",
     link: "#contact"
   }

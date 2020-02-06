@@ -72,19 +72,19 @@ class ContactMe extends Component {
             <h1 className="text-center Contact-me-section-heading">
               Contact Me
             </h1>
+            <p className="Card-text text-secondary">
+              Interested in working together, need some advice or just want to
+              say hi? Feel free to message me.
+            </p>
           </Col>
         </Row>
         <Row>
           {messageIsSent ? (
             <Col className="Thank-you-card d-flex align-items-center justify-content-center">
               <div>
-                {/* <h4 className="text-secondary">Message recieved!</h4> */}
                 <h1 className="Thank-you-card-text mb-3">
                   Thank you for your message!
                 </h1>
-                {/* <h4 className="text-secondary">
-                  I will reach back out to you as soon as possible.
-                </h4> */}
                 <Button
                   size="lg"
                   variant="outline-secondary"
