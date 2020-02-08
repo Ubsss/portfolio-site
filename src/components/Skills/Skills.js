@@ -33,7 +33,7 @@ class Skills extends Component {
       >
         <Row>
           <Col>
-            <h1 className="section-heading Skills-section-heading">Skills</h1>
+            <h1 className=" Skills-heading">Skills</h1>
             <p className="Card-text text-secondary">
               Here are some of the major skills and tools I picked up over the
               years. Want to see more? Visit my{" "}

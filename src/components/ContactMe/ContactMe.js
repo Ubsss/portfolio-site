@@ -141,7 +141,7 @@ class ContactMe extends Component {
                 <Button
                   size="lg"
                   variant="outline-secondary"
-                  className=" btn btn-block Form-button"
+                  className=" btn Form-button"
                   type="submit"
                 >
                   Message Me

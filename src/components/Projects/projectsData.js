@@ -25,7 +25,7 @@ const ProjectList = [
   {
     id: 4,
     icon: "",
-    name: "C++ Fun",
+    name: "Some C++ Fun",
     description:
       "A few of my fun C++ projects back when I lived hardware dev life.",
     link: "https://github.com/Ubsss/Cpp"
