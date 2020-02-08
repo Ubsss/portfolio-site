@@ -1,0 +1,22 @@
+.About-me-section {
+  border-radius: 25px;
+}
+
+.About-me-section-heading {
+  /* color: tomato; */
+  font-size: 50px;
+}
+
+.Card-title {
+  color: tomato;
+  font-size: 24px;
+}
+
+.Card-text {
+  font-size: 18px;
+}
+
+.Card-text-empasise {
+  color: tomato;
+  font-size: 18px;
+}

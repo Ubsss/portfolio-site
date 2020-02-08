@@ -1,0 +1,20 @@
+.Header-name {
+  /* text-transform: uppercase; */
+  font-size: 50px;
+  color: tomato;
+}
+
+.Header-photo {
+  background-image: url("./profilePhoto.jpeg");
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Header {
+  height: 800px;
+}
+
+.Form-button {
+  border: 2px solid tomato;
+}
