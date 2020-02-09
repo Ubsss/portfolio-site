@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import "./Skills.css";
 import { ToolsandSkills } from "./skillsData";
+import linkIcon from "./link.svg";
 
 class Skill extends Component {
   render() {
@@ -43,6 +44,11 @@ class Skills extends Component {
                 rel="noopener noreferrer"
               >
                 Linkedin
+                <Image
+                  src={linkIcon}
+                  alt="link icon"
+                  style={{ width: 15, height: 15 }}
+                />
               </a>{" "}
               profile.
             </p>

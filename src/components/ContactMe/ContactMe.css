@@ -17,6 +17,7 @@
 }
 
 .Form-button {
+  color: tomato;
   border: 2px solid tomato;
 }
 
@@ -32,4 +33,12 @@
 
 textarea {
   resize: none;
+}
+
+a:link {
+  color: tomato;
+}
+
+a:visited {
+  color: tomato;
 }

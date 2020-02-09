@@ -80,15 +80,15 @@ class ContactMe extends Component {
         </Row>
         <Row>
           {messageIsSent ? (
-            <Col className="Thank-you-card d-flex align-items-center justify-content-center">
+            <Col className="Thank-you-card d-flex align-items-center justify-content-center Contact-me-section">
               <div>
                 <h1 className="Thank-you-card-text mb-3">
                   Thank you for your message!
                 </h1>
                 <Button
-                  size="lg"
+                  // size="lg"
                   variant="outline-secondary"
-                  className="btn btn-block Form-button"
+                  className="btn Form-button"
                   type="button"
                   onClick={this.handleMessageResend}
                 >
@@ -103,7 +103,7 @@ class ContactMe extends Component {
                   <Form.Control
                     type="text"
                     placeholder="Name"
-                    size="lg"
+                    // size="lg"
                     className="Form-styling"
                     onChange={this.handleNameChange}
                   />
@@ -113,7 +113,7 @@ class ContactMe extends Component {
                   <Form.Control
                     type="email"
                     placeholder="Email"
-                    size="lg"
+                    // size="lg"
                     className="Form-styling"
                     onChange={this.handleEmailChange}
                   />
@@ -123,7 +123,7 @@ class ContactMe extends Component {
                   <Form.Control
                     type="text"
                     placeholder="Subject"
-                    size="lg"
+                    // size="lg"
                     className="Form-styling"
                     onChange={this.handleSubjectChange}
                   />
@@ -133,18 +133,18 @@ class ContactMe extends Component {
                     as="textarea"
                     rows="4"
                     placeholder="Message"
-                    size="lg"
+                    // size="lg"
                     className="Form-styling"
                     onChange={this.handleMessageChange}
                   />
                 </Form.Group>
                 <Button
-                  size="lg"
+                  // size="lg"
                   variant="outline-secondary"
                   className=" btn Form-button"
                   type="submit"
                 >
-                  Message Me
+                  Send Message
                 </Button>
               </Form>
             </Col>

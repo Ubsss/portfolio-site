@@ -11,14 +11,35 @@
   font-size: 18px;
 }
 
-/* Zoom In #1 */
-.hover01 figure img {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+.project {
+  border-radius: 20px;
 }
-.hover01 figure:hover img {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
+
+.overlay {
+  background-position: center center;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.8s ease;
+  background-color: gray;
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.details-button {
+  border: 2px solid tomato;
+}
+
+.projectImage {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

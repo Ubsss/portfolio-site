@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Image } from "react-bootstrap";
 import "./Header.css";
 import SOCIAL from "../SocialMedia/SocialMedia";
+import downloadIcon from "./download.svg";
 
 class HEADER extends Component {
   render() {
@@ -18,7 +19,7 @@ class HEADER extends Component {
               </h4>
               <SOCIAL />
               <Button
-                size="lg"
+                // size="lg"
                 variant="outline-secondary"
                 className=" btn Form-button"
               >

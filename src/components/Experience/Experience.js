@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import "./Experience.css";
 import { ExperienceList } from "./experienceData";
+import linkIcon from "./link.svg";
 // import rightArrow from "./right-arrow.svg";
 import rightArrow1 from "./rightArrow1.svg";
 class Event extends Component {
@@ -46,13 +47,18 @@ class Experience extends Component {
               Experience
             </h1>
             <p className="Card-text text-secondary">
-              Here is a breif overview of my journey so far. Visit my{" "}
+              A breif overview of my journey so far. Checkout my{" "}
               <a
                 href="https://www.linkedin.com/in/uchechukwu-uboh-31030196/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Linkedin
+                <Image
+                  src={linkIcon}
+                  alt="link icon"
+                  style={{ width: 15, height: 15 }}
+                />
               </a>{" "}
               profile for more.
             </p>
