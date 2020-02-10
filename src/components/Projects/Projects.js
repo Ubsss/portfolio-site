@@ -20,7 +20,8 @@ class Project extends Component {
       >
         <Card.Body>
           <Card.Text className="Card-text text-light overlay">
-            <p>{name}</p>
+            {name}
+            <br />
             <Button
               // size="lg"
               variant="outline-light"

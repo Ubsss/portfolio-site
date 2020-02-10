@@ -10,20 +10,20 @@ class HEADER extends Component {
   // trigger resume download
   handleDownloadEvent = e => {
     // storage.refFromURL(process.env.REACT_APP_RESUME_URL);
-    let imgLoc = storage.ref(process.env.REACT_APP_RESUME_URL);
+    let imgLoc = storage.refFromURL(process.env.REACT_APP_RESUME_URL);
 
     imgLoc
-      .child("Uchechukwu_Uboh.pdf")
+      .child("/Uchechukwu_Uboh.pdf")
       .getDownloadURL()
       .then(url => {
         axios
           .get(url)
           .then(data => {
             downloader(data.data, "Uchechukwu_uboh.pdf");
-            // console.log(data);
+            console.log(data);
           })
           .catch(err => {
-            throw {
+            return {
               error: {
                 message: err.message
               }
@@ -31,15 +31,8 @@ class HEADER extends Component {
           });
       })
       .catch(err => {
-        console.log(err);
+        console.log("error: " + err);
       });
-
-    // imgLoc
-    //   .child(process.env.REACT_APP_RESUME_URL)
-    //   .getDownloadURL()
-    //   .then(url => {
-    //     console.log(url);
-    //   });
   };
 
   render() {

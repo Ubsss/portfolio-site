@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, Nav, Container, Row, Col, Image } from "react-bootstrap";
 import navLinks from "./navData.js";
-// import logo from "../../assets/battery-full-solid.svg";
 import "./NavBar.css";
 import ToTopArrow from "./toTopArrow.svg";
 
