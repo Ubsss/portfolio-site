@@ -1,0 +1,24 @@
+.Skills-section {
+  border-radius: 25px;
+}
+
+.Skills-heading {
+  color: tomato;
+  font-size: 50px;
+}
+
+.Card-title {
+  color: tomato;
+  font-size: 24px;
+}
+
+.Card-text {
+  font-size: 18px;
+}
+a:link {
+  color: tomato;
+}
+
+a:visited {
+  color: tomato;
+}

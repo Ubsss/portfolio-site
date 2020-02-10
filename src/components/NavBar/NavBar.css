@@ -1,0 +1,12 @@
+.activeSectionNav {
+  color: tomato;
+  border-bottom: 2px solid tomato;
+}
+
+/* fixed button at buttom right */
+.jumpToTopButton {
+  z-index: 1;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
