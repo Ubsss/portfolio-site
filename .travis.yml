@@ -5,15 +5,16 @@ node_js:
 cache:
   directories:
     - node_modules
+warnings_are_errors: false
+install:
+  - npm install
 script:
-  - npm test
-  - npm run test:coverage
   - npm run build
 deploy:
-  provider: pages
+  provider: firebase
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep_history: true
   local_dir: build
+  token:
+    secure: $FIREBASE_TOKEN
   on:
     branch: master
