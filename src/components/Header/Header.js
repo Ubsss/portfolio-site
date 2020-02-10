@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./Header.css";
 import SOCIAL from "../SocialMedia/SocialMedia";
-import { storage } from "../../firebase";
+import { storage } from "../../firebaseDB";
 import axios from "axios";
 import downloader from "js-file-download";
 
