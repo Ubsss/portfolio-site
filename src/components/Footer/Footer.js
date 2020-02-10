@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import linkIcon from "./link.svg";
 
 class FOOTER extends Component {
   render() {
@@ -13,8 +14,14 @@ class FOOTER extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Uchechukwu Uboh.
-            </a>
+              Uchechukwu Uboh
+              <Image
+                src={linkIcon}
+                alt="link icon"
+                style={{ width: 15, height: 15 }}
+              />
+            </a>{" "}
+            .
           </Col>
         </Row>
       </Container>

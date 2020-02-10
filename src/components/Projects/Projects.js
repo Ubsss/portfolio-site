@@ -6,7 +6,7 @@ import linkIcon from "./link.svg";
 
 class Project extends Component {
   render() {
-    const { icon, name, description, link } = this.props.Item;
+    const { icon, name, link } = this.props.Item;
     return (
       <Card
         className="col-5 col-sm-6 col-md-6 col-lg-6 d-inline-block text-center project m-1 projectImage"
@@ -20,7 +20,7 @@ class Project extends Component {
       >
         <Card.Body>
           <Card.Text className="Card-text text-light overlay">
-            <p className="">{name}</p>
+            <p>{name}</p>
             <Button
               // size="lg"
               variant="outline-light"

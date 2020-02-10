@@ -1,10 +1,47 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import "./Header.css";
 import SOCIAL from "../SocialMedia/SocialMedia";
-import downloadIcon from "./download.svg";
+import { storage } from "../../firebase";
+import axios from "axios";
+import downloader from "js-file-download";
 
 class HEADER extends Component {
+  // trigger resume download
+  handleDownloadEvent = e => {
+    // storage.refFromURL(process.env.REACT_APP_RESUME_URL);
+    let imgLoc = storage.ref(process.env.REACT_APP_RESUME_URL);
+
+    imgLoc
+      .child("Uchechukwu_Uboh.pdf")
+      .getDownloadURL()
+      .then(url => {
+        axios
+          .get(url)
+          .then(data => {
+            downloader(data.data, "Uchechukwu_uboh.pdf");
+            // console.log(data);
+          })
+          .catch(err => {
+            throw {
+              error: {
+                message: err.message
+              }
+            };
+          });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+
+    // imgLoc
+    //   .child(process.env.REACT_APP_RESUME_URL)
+    //   .getDownloadURL()
+    //   .then(url => {
+    //     console.log(url);
+    //   });
+  };
+
   render() {
     return (
       <Container className="Header-photo Header mb-4" id="about" fluid>
@@ -22,6 +59,7 @@ class HEADER extends Component {
                 // size="lg"
                 variant="outline-secondary"
                 className=" btn Form-button"
+                onClick={this.handleDownloadEvent}
               >
                 Download Resume
               </Button>
