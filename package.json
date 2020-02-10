@@ -2,7 +2,6 @@
   "name": "portfoliio-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Ubsss.github.io/portfolio-site/",
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.1.7",
     "axios": "^0.19.2",
