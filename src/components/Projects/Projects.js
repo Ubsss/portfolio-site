@@ -18,25 +18,19 @@ class Project extends Component {
           width: "16rem"
         }}
       >
-        <Card.Body>
-          <Card.Text className="Card-text text-light overlay">
-            {name}
-            <br />
-            <Button
-              // size="lg"
-              variant="outline-light"
-              className=" btn details-button"
-            >
-              <a href={link} target="_blank" rel="noopener noreferrer">
-                Visit Project
-                <Image
-                  src={linkIcon}
-                  alt="link icon"
-                  style={{ width: 15, height: 15 }}
-                />
-              </a>{" "}
-            </Button>
-          </Card.Text>
+        <Card.Body className=" text-light overlay">
+          <p>{name}</p>
+
+          <Button variant="light" className=" btn details-button">
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              Visit Project
+              <Image
+                src={linkIcon}
+                alt="link icon"
+                style={{ width: 15, height: 15 }}
+              />
+            </a>{" "}
+          </Button>
         </Card.Body>
       </Card>
     );

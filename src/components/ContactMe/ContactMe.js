@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import { connect } from "react-redux";
+import axios from "axios";
 
 import "./ContactMe.css";
 
@@ -28,39 +29,28 @@ class ContactMe extends Component {
   handleSubmit = e => {
     // e.preventDefault();
 
-    console.log(this.props.messageMessage);
+    // start loading
 
-    let sendMessageURL = process.env.REACT_APP_SEND_MESSAGE_URL;
+    //send api call
+    axios
+      .post(
+        "https://us-central1-portfolio-site-8e4f6.cloudfunctions.net/sendContactMeMessage",
 
-    // add verfication token to api call
-
-    // const transporter = nodemailer.createTransport({
-    //   service: "Yahoo",
-    //   auth: {
-    //     user: process.env.REACT_APP_BOT_EMAIL_USER,
-    //     pass: process.env.REACT_APP_BOT_EMAIL_PASSWORD
-    //   }
-    // });
-
-    // const mailOptions = {
-    //   from: process.env.REACT_APP_BOT_EMAIL_USE,
-    //   to: process.env.REACT_APP_PERSONAL_EMAIL,
-    //   subject: this.props.messageSubject,
-    //   text: `Name: ${this.props.messageName}
-    //          Email: ${this.props.messageEmail}
-    //          Message: ${this.props.messageMessage}`
-    // };
-
-    // transporter.sendMail(mailOptions, (error, info) => {
-    //   if (error) {
-    //     console.log(error);
-    //   } else {
-    //     this.props.updateContactMeState(true);
-    //     console.log("Email sent: " + info.response);
-    //   }
-    // });
-
-    this.props.updateContactMeState(true);
+        {
+          messageSubject: this.props.messageSubject,
+          messageMessage: this.props.messageMessage,
+          messageName: this.props.messageName,
+          messageEmail: this.props.messageEmail
+        }
+      )
+      .then(result => {
+        this.props.updateContactMeState(true);
+        console.log(result);
+      })
+      .catch(err => {
+        this.props.updateContactMeState(false);
+        console.log(err.message);
+      });
   };
 
   render() {
@@ -103,7 +93,7 @@ class ContactMe extends Component {
                   <Form.Control
                     type="text"
                     placeholder="Name"
-                    // size="lg"
+                    required
                     className="Form-styling"
                     onChange={this.handleNameChange}
                   />
@@ -113,7 +103,7 @@ class ContactMe extends Component {
                   <Form.Control
                     type="email"
                     placeholder="Email"
-                    // size="lg"
+                    required
                     className="Form-styling"
                     onChange={this.handleEmailChange}
                   />
@@ -123,7 +113,7 @@ class ContactMe extends Component {
                   <Form.Control
                     type="text"
                     placeholder="Subject"
-                    // size="lg"
+                    required
                     className="Form-styling"
                     onChange={this.handleSubjectChange}
                   />
@@ -133,13 +123,12 @@ class ContactMe extends Component {
                     as="textarea"
                     rows="4"
                     placeholder="Message"
-                    // size="lg"
+                    required
                     className="Form-styling"
                     onChange={this.handleMessageChange}
                   />
                 </Form.Group>
                 <Button
-                  // size="lg"
                   variant="outline-secondary"
                   className=" btn Form-button"
                   type="submit"

@@ -27,7 +27,7 @@
   width: 100%;
   opacity: 0;
   transition: 0.8s ease;
-  background-color: gray;
+  background-color: tomato;
 }
 
 .project:hover .overlay {
