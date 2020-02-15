@@ -3,7 +3,6 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import "./Experience.css";
 import { ExperienceList } from "./experienceData";
 import linkIcon from "./link.svg";
-// import rightArrow from "./right-arrow.svg";
 import rightArrow1 from "./rightArrow1.svg";
 class Event extends Component {
   render() {

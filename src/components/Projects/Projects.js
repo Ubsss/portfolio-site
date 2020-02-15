@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Card, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import "./Projects.css";
 import { ProjectList } from "./projectsData.js";
 import linkIcon from "./link.svg";
@@ -44,13 +44,6 @@ class Projects extends Component {
         id="projects"
         fluid
       >
-        {/* <Row className="h-100">
-          <Col className="d-flex align-items-center justify-content-center">
-          <div>
-
-          </div>
-          </Col>
-        </Row> */}
         <Row>
           <Col>
             <p className="Card-text text-secondary">
