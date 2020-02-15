@@ -1,13 +1,26 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import "./Header.css";
 import SOCIAL from "../SocialMedia/SocialMedia";
-import linkIcon from "./link.svg";
+import { storage } from "../../firebase";
+import axios from "axios";
 
 class HEADER extends Component {
+  // trigger resume download
+  handleDownloadEvent = e => {
+    // storage.refFromURL(process.env.REACT_APP_RESUME_URL);
+    let imgLoc = storage.ref(process.env.REACT_APP_RESUME_URL);
+    imgLoc
+      .child(process.env.REACT_APP_RESUME_URL)
+      .getDownloadURL()
+      .then(url => {
+        console.log(url);
+      });
+  };
+
   render() {
     return (
-      <Container className="Header-photo Header mb-4" fluid>
+      <Container className="Header-photo Header mb-4" id="about" fluid>
         <Row className=" h-100">
           <Col className="d-flex align-items-center justify-content-center text-center col-12 col-sm-12 col-md-6 col-lg-6  bg-white">
             <div>
@@ -24,18 +37,7 @@ class HEADER extends Component {
                 className=" btn Form-button"
                 onClick={this.handleDownloadEvent}
               >
-                <a
-                  href="https://firebasestorage.googleapis.com/v0/b/portfolio-site-8e4f6.appspot.com/o/resume%2FUchechukwu_Uboh.pdf?alt=media&token=4f655bc0-7109-4fef-a6ff-769e7fa7f835"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Resume
-                  <Image
-                    src={linkIcon}
-                    alt="link icon"
-                    style={{ width: 15, height: 15 }}
-                  />
-                </a>
+                Download Resume
               </Button>
             </div>
           </Col>

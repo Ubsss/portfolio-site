@@ -5,7 +5,10 @@ import "./AboutMe.css";
 class AboutMe extends Component {
   render() {
     return (
-      <Container className="About-me-section bg-white text-center p-4">
+      <Container
+        className="About-me-section bg-white text-center p-4"
+        id="about"
+      >
         <Row>
           <Col>
             <p className="Card-title">

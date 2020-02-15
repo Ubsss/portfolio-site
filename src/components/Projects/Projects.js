@@ -9,7 +9,7 @@ class Project extends Component {
     const { icon, name, link } = this.props.Item;
     return (
       <Card
-        className="col-5 col-sm-6 col-md-6 col-lg-6 d-inline-block text-center project m-1 projectImage"
+        className="col-5 col-sm-6 col-md-6 col-lg-6 d-inline-block text-center m-1 project projectImage"
         border="white"
         style={{
           borderRadius: 10,

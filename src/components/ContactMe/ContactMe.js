@@ -27,29 +27,36 @@ class ContactMe extends Component {
   };
 
   handleSubmit = e => {
-    // e.preventDefault();
+    e.preventDefault();
+    this.props.updateContactMeState(false);
 
     // start loading
+    // this.props.updateContactMeState("loading");
 
     //send api call
-    axios
-      .post(
+    axios({
+      method: "post",
+      url:
         "https://us-central1-portfolio-site-8e4f6.cloudfunctions.net/sendContactMeMessage",
 
-        {
-          messageSubject: this.props.messageSubject,
-          messageMessage: this.props.messageMessage,
-          messageName: this.props.messageName,
-          messageEmail: this.props.messageEmail
-        }
-      )
+      data: {
+        messageSubject: this.props.messageSubject,
+        messageMessage: this.props.messageMessage,
+        messageName: this.props.messageName,
+        messageEmail: this.props.messageEmail,
+        messageDTStamp: new Date().toDateString()
+      },
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
       .then(result => {
-        this.props.updateContactMeState(true);
         console.log(result);
+        this.props.updateContactMeState(true);
       })
       .catch(err => {
+        console.log(err);
         this.props.updateContactMeState(false);
-        console.log(err.message);
       });
   };
 
