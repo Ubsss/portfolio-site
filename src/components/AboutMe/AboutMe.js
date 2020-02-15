@@ -6,7 +6,7 @@ class AboutMe extends Component {
   render() {
     return (
       <Container
-        className="About-me-section bg-white text-center p-4"
+        className="About-me-section bg-white text-center mt-5 mb-5 p-5"
         id="about"
       >
         <Row>

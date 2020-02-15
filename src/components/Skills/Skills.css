@@ -22,3 +22,7 @@ a:link {
 a:visited {
   color: tomato;
 }
+
+.Skills-Section-Height {
+  height: 600px;
+}

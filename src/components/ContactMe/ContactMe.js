@@ -63,7 +63,10 @@ class ContactMe extends Component {
   render() {
     const { messageIsSent } = this.props;
     return (
-      <Container className="justify-content-center text-center" id="contact">
+      <Container
+        className="justify-content-center text-center mt-5 mb-5 p-4"
+        id="contact"
+      >
         <Row>
           <Col>
             <h1 className="text-center Contact-me-section-heading">
@@ -136,9 +139,10 @@ class ContactMe extends Component {
                   />
                 </Form.Group>
                 <Button
-                  variant="outline-secondary"
+                  variant="outline-white"
                   className=" btn Form-button"
                   type="submit"
+                  size="lg"
                 >
                   Send Message
                 </Button>

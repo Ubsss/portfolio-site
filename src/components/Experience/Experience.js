@@ -10,10 +10,10 @@ class Event extends Component {
     const { period, year, accomplishment, organization } = this.props.Item;
     return (
       <Row>
-        <Col className="col-5  d-inline-block text-right  text-secondary  Card-title">
+        <Col className="col-5  d-inline-block text-right  text-secondary mt-0 Card-title">
           {year}
         </Col>
-        <Col className="col-1  d-inline-block text-center  ">
+        <Col className="col-1  d-inline-block text-center  mt-1">
           <Image
             src={rightArrow1}
             style={{ width: 25, height: 25 }}
@@ -38,7 +38,9 @@ class Experience extends Component {
   render() {
     return (
       <Container
-        className="Skills-section bg-white text-center p-4 justify-content-center align-center"
+        className="Skills-section bg-white text-center p-4 mt-5 mb-5 justify-content-center align-center {
+          height: 800px;
+        }"
         id="experience"
       >
         <Row>

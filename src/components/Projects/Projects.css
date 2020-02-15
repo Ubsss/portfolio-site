@@ -17,7 +17,6 @@
 
 .overlay {
   background-position: center center;
-  border-radius: 10px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -27,7 +26,7 @@
   width: 100%;
   opacity: 0;
   transition: 0.8s ease;
-  background-color: tomato;
+  background-color: white;
 }
 
 .project:hover .overlay {
@@ -42,4 +41,8 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.Projects-Section-Height {
+  height: 400px;
 }

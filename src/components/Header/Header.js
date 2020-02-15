@@ -7,7 +7,7 @@ import linkIcon from "./link.svg";
 class HEADER extends Component {
   render() {
     return (
-      <Container className="Header-photo Header mb-4" fluid>
+      <Container className="Header-photo Header  mb-5" fluid>
         <Row className=" h-100">
           <Col className="d-flex align-items-center justify-content-center text-center col-12 col-sm-12 col-md-6 col-lg-6  bg-white">
             <div>
@@ -18,16 +18,17 @@ class HEADER extends Component {
                 I design, build and deploy exciting customer experiences.
               </h4>
               <SOCIAL />
-              <Button
-                // size="lg"
-                variant="outline-secondary"
-                className=" btn Form-button"
-                onClick={this.handleDownloadEvent}
+
+              <a
+                href="https://firebasestorage.googleapis.com/v0/b/portfolio-site-8e4f6.appspot.com/o/resume%2FUchechukwu_Uboh.pdf?alt=media&token=4f655bc0-7109-4fef-a6ff-769e7fa7f835"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <a
-                  href="https://firebasestorage.googleapis.com/v0/b/portfolio-site-8e4f6.appspot.com/o/resume%2FUchechukwu_Uboh.pdf?alt=media&token=4f655bc0-7109-4fef-a6ff-769e7fa7f835"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Button
+                  size="lg"
+                  variant="outline-white"
+                  className=" btn Form-button"
+                  onClick={this.handleDownloadEvent}
                 >
                   View Resume
                   <Image
@@ -35,8 +36,8 @@ class HEADER extends Component {
                     alt="link icon"
                     style={{ width: 15, height: 15 }}
                   />
-                </a>
-              </Button>
+                </Button>
+              </a>
             </div>
           </Col>
         </Row>

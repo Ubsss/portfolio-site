@@ -21,6 +21,12 @@
   border: 2px solid tomato;
 }
 
+.Form-button:hover {
+  color: white;
+  transition: 0.8s ease;
+  background-color: tomato;
+}
+
 .Thank-you-card-text {
   color: tomato;
   font-size: 50px;
@@ -41,4 +47,8 @@ a:link {
 
 a:visited {
   color: tomato;
+}
+
+.Contact-Me-Section-Height {
+  height: 600px;
 }

@@ -9,7 +9,7 @@ class Project extends Component {
     const { icon, name, link } = this.props.Item;
     return (
       <Card
-        className="col-5 col-sm-6 col-md-6 col-lg-6 d-inline-block text-center m-1 project projectImage"
+        className="col-5 col-sm-6 col-md-6 col-lg-6 d-inline-block text-center m-1 project projectImage "
         border="white"
         style={{
           borderRadius: 10,
@@ -18,10 +18,9 @@ class Project extends Component {
           width: "16rem"
         }}
       >
-        <Card.Body className=" text-light overlay">
-          <p>{name}</p>
-
-          <Button variant="light" className=" btn details-button">
+        <Card.Body className=" text-secondary overlay text-center">
+          <div>
+            <p>{name}</p>
             <a href={link} target="_blank" rel="noopener noreferrer">
               Visit Project
               <Image
@@ -29,8 +28,8 @@ class Project extends Component {
                 alt="link icon"
                 style={{ width: 15, height: 15 }}
               />
-            </a>{" "}
-          </Button>
+            </a>
+          </div>
         </Card.Body>
       </Card>
     );
@@ -41,10 +40,17 @@ class Projects extends Component {
   render() {
     return (
       <Container
-        className="Projects-section bg-white text-center pb-4"
+        className="Projects-section bg-white text-center mt-5 mb-5 p-4 "
         id="projects"
         fluid
       >
+        {/* <Row className="h-100">
+          <Col className="d-flex align-items-center justify-content-center">
+          <div>
+
+          </div>
+          </Col>
+        </Row> */}
         <Row>
           <Col>
             <p className="Card-text text-secondary">
