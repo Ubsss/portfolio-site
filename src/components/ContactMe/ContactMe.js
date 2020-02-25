@@ -6,8 +6,113 @@ import axios from "axios";
 import "./ContactMe.css";
 
 class ContactMe extends Component {
+  handleContactMeSection = messageIsSent => {
+    switch (messageIsSent) {
+      case "not-sent":
+        return `<Col className="text-center Contact-me-section">
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Group controlId="formName">
+            <Form.Control
+              type="text"
+              placeholder="Name"
+              required
+              className="Form-styling"
+              onChange={this.handleNameChange}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formEmail">
+            <Form.Control
+              type="email"
+              placeholder="Email"
+              required
+              className="Form-styling"
+              onChange={this.handleEmailChange}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formSubject">
+            <Form.Control
+              type="text"
+              placeholder="Subject"
+              required
+              className="Form-styling"
+              onChange={this.handleSubjectChange}
+            />
+          </Form.Group>
+          <Form.Group controlId="formMessage">
+            <Form.Control
+              as="textarea"
+              rows="4"
+              placeholder="Message"
+              required
+              className="Form-styling"
+              onChange={this.handleMessageChange}
+            />
+          </Form.Group>
+          <Button
+            variant="outline-white"
+            className=" btn Form-button"
+            type="submit"
+            size="lg"
+          >
+            Send Message
+          </Button>
+        </Form>
+      </Col>`;
+      case "sending":
+        // code block
+        break;
+      case "sending-error":
+        return `<Col className="Thank-you-card d-flex align-items-center justify-content-center Contact-me-section">
+            <div>
+              <h1 className="Thank-you-card-text mb-3">
+                Oops...
+              </h1>
+              <p className="Card-text text-secondary">
+              There was an error sending your message. Please try again.
+              </p>
+              <Button
+                size="lg"
+                variant="outline-secondary"
+                className="btn Form-button"
+                type="button"
+                onClick={this.handleMessageResend}
+              >
+                Try again
+              </Button>
+            </div>
+          </Col>
+        );`;
+      case "sent":
+        return `<Col className="Thank-you-card d-flex align-items-center justify-content-center Contact-me-section">
+            <div>
+              <h1 className="Thank-you-card-text mb-3">
+                Thank you for your message!
+              </h1>
+              <p className="Card-text text-secondary">
+              Can't wait to chat with you!
+              </p>
+              <Button
+                // size="lg"
+                variant="outline-secondary"
+                className="btn Form-button"
+                type="button"
+                onClick={this.handleMessageResend}
+              >
+                Send another message
+              </Button>
+            </div>
+          </Col>
+        );`;
+
+      default:
+      // code block
+    }
+  };
+
   handleMessageResend = () => {
-    this.props.updateContactMeState(false);
+    this.props.updateContactMeState("not-sent");
   };
 
   handleNameChange = e => {
@@ -28,7 +133,7 @@ class ContactMe extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.updateContactMeState(false);
+    this.props.updateContactMeState("sending");
 
     // start loading
     // this.props.updateContactMeState("loading");
@@ -51,12 +156,10 @@ class ContactMe extends Component {
       }
     })
       .then(result => {
-        console.log(result);
-        this.props.updateContactMeState(true);
+        this.props.updateContactMeState("sent");
       })
       .catch(err => {
-        console.log(err);
-        this.props.updateContactMeState(false);
+        this.props.updateContactMeState("sending-error");
       });
   };
 
@@ -79,7 +182,8 @@ class ContactMe extends Component {
           </Col>
         </Row>
         <Row>
-          {messageIsSent ? (
+          {this.handleContactMeSection(messageIsSent)}
+          {/* {messageIsSent ? (
             <Col className="Thank-you-card d-flex align-items-center justify-content-center Contact-me-section">
               <div>
                 <h1 className="Thank-you-card-text mb-3">
@@ -148,7 +252,7 @@ class ContactMe extends Component {
                 </Button>
               </Form>
             </Col>
-          )}
+          )} */}
         </Row>
       </Container>
     );

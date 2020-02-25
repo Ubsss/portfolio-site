@@ -1,13 +1,13 @@
 // Only put state that is shared amongst components
 const initState = {
-  /**
+  /*
    * Contact me possible states:
-   * - Message not yet sent
-   * - Message sending error
-   * - Message is sending or loading
-   * -
+   * - not-sent: allow user to send message and show form
+   * - sending: disable form input and send button
+   * - sending-error: Show error message "Unable to send your message, please try again." and "Try again" button
+   * - sent: show thank you message and "send another message" button
    */
-  contactMeState: false,
+  contactMeState: "not-sent",
   messageName: "",
   messageEmail: "",
   messageSubject: "",
