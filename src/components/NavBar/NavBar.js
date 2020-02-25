@@ -47,7 +47,7 @@ class NAVBAR extends Component {
                   src={ToTopArrow}
                   rounded
                   alt="Scroll to top"
-                  className="jumpToTopButton col-xs-"
+                  className="jumpToTopButton "
                   style={{ width: 50, height: 50 }}
                 />
               </a>
@@ -63,7 +63,11 @@ class NAVBAR extends Component {
 class NAVBARLNKS extends Component {
   render() {
     const { name, link } = this.props.navlink;
-    return <Nav.Link href={link}>{name}</Nav.Link>;
+    return (
+      <Nav.Link className="activeSectionNav" href={link}>
+        {name}
+      </Nav.Link>
+    );
   }
 }
 
