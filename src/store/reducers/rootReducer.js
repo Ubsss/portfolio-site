@@ -3,11 +3,18 @@ const initState = {
   /*
    * Contact me possible states:
    * - not-sent: allow user to send message and show form
-   * - sending: disable form input and send button
    * - sending-error: Show error message "Unable to send your message, please try again." and "Try again" button
    * - sent: show thank you message and "send another message" button
    */
   contactMeState: "not-sent",
+
+  /**
+   * Contact me button possible states:
+   * - sending: disable button and show loading spinner
+   * - not-sending: button is available
+   */
+
+  contactMeButtonState: "not-sending",
   messageName: "",
   messageEmail: "",
   messageSubject: "",
@@ -20,7 +27,12 @@ const rootReducer = (state = initState, action) => {
     case "UPDATE_CONTACT_ME_STATE":
       return {
         ...state,
-        messageIsSent: action.value
+        contactMeState: action.value
+      };
+    case "UPDATE_CONTACT_ME_BUTTON_STATE":
+      return {
+        ...state,
+        contactMeButtonState: action.value
       };
     case "UPDATE_MESSAGE_NAME":
       return {

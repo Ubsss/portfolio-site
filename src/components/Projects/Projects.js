@@ -9,13 +9,13 @@ class Project extends Component {
     const { icon, name, link } = this.props.Item;
     return (
       <Card
-        className="col-5 col-sm-6 col-md-6 col-lg-6 d-inline-block text-center m-1 project projectImage "
+        className="col-12 col-sx-6 col-sm-6 col-md-6 col-lg-6 d-inline-block text-center m-1 project projectImage "
         border="white"
         style={{
           borderRadius: 10,
           height: 200,
           backgroundImage: `url(${icon})`,
-          width: "16rem"
+          width: "20rem"
         }}
       >
         <Card.Body className=" text-secondary overlay text-center">
