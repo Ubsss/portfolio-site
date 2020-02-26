@@ -29,51 +29,34 @@ class ContactMe extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    setTimeout(() => {
-      this.props.updateContactMeButtonState("sending");
-    }, 1000);
+    this.props.updateContactMeButtonState("sending");
 
-    setTimeout(() => {
-      this.props.updateContactMeState("sent");
-    }, 3000);
+    //send api call
+    axios({
+      method: "post",
+      url:
+        "https://us-central1-portfolio-site-8e4f6.cloudfunctions.net/sendContactMeMessage",
 
-    setTimeout(() => {
-      this.props.updateContactMeState("sending-error");
-    }, 5000);
-
-    setTimeout(() => {
-      this.props.updateContactMeState("not-sent");
-      this.props.updateContactMeButtonState("not-sending");
-    }, 7000);
-
-    // this.props.updateContactMeButtonState("sending");
-
-    // //send api call
-    // axios({
-    //   method: "post",
-    //   url:
-    //     "https://us-central1-portfolio-site-8e4f6.cloudfunctions.net/sendContactMeMessage",
-
-    //   data: {
-    //     messageSubject: this.props.messageSubject,
-    //     messageMessage: this.props.messageMessage,
-    //     messageName: this.props.messageName,
-    //     messageEmail: this.props.messageEmail,
-    //     messageDTStamp: new Date().toDateString()
-    //   },
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   }
-    // })
-    //   .then(result => {
-    //     this.props.updateContactMeState("sent");
-    //   })
-    //   .catch(err => {
-    //     this.props.updateContactMeState("sending-error");
-    //   })
-    //   .then(() => {
-    //     this.props.updateContactMeButtonState("not-sending");
-    //   });
+      data: {
+        messageSubject: this.props.messageSubject,
+        messageMessage: this.props.messageMessage,
+        messageName: this.props.messageName,
+        messageEmail: this.props.messageEmail,
+        messageDTStamp: new Date().toDateString()
+      },
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(result => {
+        this.props.updateContactMeState("sent");
+      })
+      .catch(err => {
+        this.props.updateContactMeState("sending-error");
+      })
+      .then(() => {
+        this.props.updateContactMeButtonState("not-sending");
+      });
   };
 
   render() {
@@ -101,7 +84,7 @@ class ContactMe extends Component {
                   <Form.Control
                     type="text"
                     placeholder="Name"
-                    // required
+                    required
                     className="Form-styling"
                     onChange={this.handleNameChange}
                   />
@@ -111,7 +94,7 @@ class ContactMe extends Component {
                   <Form.Control
                     type="email"
                     placeholder="Email"
-                    // required
+                    required
                     className="Form-styling"
                     onChange={this.handleEmailChange}
                   />
@@ -121,7 +104,7 @@ class ContactMe extends Component {
                   <Form.Control
                     type="text"
                     placeholder="Subject"
-                    // required
+                    required
                     className="Form-styling"
                     onChange={this.handleSubjectChange}
                   />
@@ -129,9 +112,9 @@ class ContactMe extends Component {
                 <Form.Group controlId="formMessage">
                   <Form.Control
                     as="textarea"
-                    rows="6"
+                    rows="8"
                     placeholder="Message"
-                    // required
+                    required
                     className="Form-styling"
                     onChange={this.handleMessageChange}
                   />
