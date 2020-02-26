@@ -23,7 +23,7 @@ class NAVBAR extends Component {
 
   render() {
     return (
-      <Navbar expand="lg" variant="light">
+      <Navbar expand="xl" variant="light" className="text-white ">
         <Container id="top" fluid>
           <Navbar.Brand href="#page-top"></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

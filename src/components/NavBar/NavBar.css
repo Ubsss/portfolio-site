@@ -1,13 +1,14 @@
-.activeSectionNav {
+.navbar-light .navbar-nav .nav-link {
   color: tomato;
 }
 
-.activeSectionNav:hover {
-  font-size: 110%;
+.navbar-light .navbar-nav .nav-link:visited {
   color: tomato;
-  border-bottom: 2px solid tomato;
 }
-
+.navbar-light .navbar-nav .nav-link:hover {
+  color: red;
+  transition: 0.4s ease;
+}
 /* fixed button at buttom right */
 .jumpToTopButton {
   z-index: 1;
