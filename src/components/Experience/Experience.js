@@ -37,7 +37,7 @@ class Experience extends Component {
   render() {
     return (
       <Container
-        className="Skills-section bg-white text-center p-4 mt-5 mb-5 justify-content-center align-center {
+        className="Skills-section bg-white text-center p-4 my-5 justify-content-center align-center {
           height: 800px;
         }"
         id="experience"

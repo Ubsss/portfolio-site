@@ -40,7 +40,7 @@ class Projects extends Component {
   render() {
     return (
       <Container
-        className="Projects-section bg-white text-center mt-5 mb-5 p-4 "
+        className="Projects-section bg-white text-center my-5 p-4 "
         id="projects"
         fluid
       >

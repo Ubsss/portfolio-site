@@ -1,16 +1,28 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image, Card } from "react-bootstrap";
+import profilePhoto from "./profilePhoto.jpeg";
 import "./AboutMe.css";
 
 class AboutMe extends Component {
   render() {
     return (
       <Container
-        className="About-me-section bg-white text-center mt-5 mb-5 p-5"
+        className="About-me-section bg-white text-center my-5 p-4"
         id="about"
       >
         <Row>
-          <Col>
+          <Col className="d-block d-md-none  d-flex justify-content-center py-4">
+            <Card style={{ width: "20rem" }}>
+              <Card.Img
+                className="profile-image"
+                as={Image}
+                variant="top"
+                src={profilePhoto}
+                rounded
+              />
+            </Card>
+          </Col>
+          <Col className="">
             <p className="Card-title">
               Hello, I'm Uchechukwu. It is a pleasure to meet you!
             </p>

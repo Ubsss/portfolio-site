@@ -62,7 +62,7 @@ class ContactMe extends Component {
   render() {
     return (
       <Container
-        className="justify-content-center text-center mt-5 mb-5 p-4"
+        className="justify-content-center text-center my-5 p-4"
         id="contact"
       >
         <Row>

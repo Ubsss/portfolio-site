@@ -29,7 +29,7 @@ class Skills extends Component {
   render() {
     return (
       <Container
-        className="Skills-section bg-white text-center mt-5 mb-5 p-4 "
+        className="Skills-section bg-white text-center my-5 p-4 "
         id="skills"
       >
         <Row>

@@ -24,3 +24,8 @@
 .About-Me-Section-Height {
   height: 300px;
 }
+
+.profile-image {
+  height: 80;
+  width: 80;
+}
