@@ -11,7 +11,7 @@ class AboutMe extends Component {
         id="about"
       >
         <Row>
-          <Col className="d-block d-md-none  d-flex justify-content-center py-4">
+          <Col className="col-12 d-block d-md-none  d-flex justify-content-center pb-4">
             <Card style={{ width: "20rem" }}>
               <Card.Img
                 className="profile-image"
@@ -22,7 +22,7 @@ class AboutMe extends Component {
               />
             </Card>
           </Col>
-          <Col className="">
+          <Col className="col-12">
             <p className="Card-title">
               Hello, I'm Uchechukwu. It is a pleasure to meet you!
             </p>
