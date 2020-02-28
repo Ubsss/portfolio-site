@@ -48,7 +48,7 @@ class Experience extends Component {
               Experience
             </h1>
             <p className="Card-text text-secondary">
-              A breif overview of my journey so far. Checkout my{" "}
+              A brief overview of my journey so far. Checkout my{" "}
               <a
                 href="https://www.linkedin.com/in/uchechukwu-uboh-31030196/"
                 target="_blank"
