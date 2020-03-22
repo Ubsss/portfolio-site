@@ -18,8 +18,8 @@ class Project extends Component {
           width: "20rem"
         }}
       >
-        <Card.Body className=" text-secondary overlay text-center">
-          <div>
+        <Card.Body className=" d-flex align-items-center justify-content-center text-secondary overlay text-center">
+          <div className="text-center">
             <p>{name}</p>
             <a href={link} target="_blank" rel="noopener noreferrer">
               Visit Project
