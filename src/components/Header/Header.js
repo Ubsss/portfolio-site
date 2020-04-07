@@ -1,11 +1,33 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Button, Image } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  Modal,
+  Card,
+  ResponsiveEmbed,
+} from "react-bootstrap";
 import "./Header.css";
 import SOCIAL from "../SocialMedia/SocialMedia";
-import linkIcon from "./link.svg";
+import resume from "./Uchechukwu_Uboh.pdf";
 
 class HEADER extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { showModal: false, fadeOut: false };
+  }
+
   render() {
+    const handleClose = () => {
+      this.setState({ fadeOut: true });
+      setTimeout(this.setState({ showModal: false, fadeOut: false }), 1000);
+    };
+    const handleShow = (e) => {
+      e.preventDefault();
+      this.setState({ showModal: true });
+    };
+
     return (
       <Container className="Header-photo Header  mb-5" fluid>
         <Row className=" h-100">
@@ -28,17 +50,42 @@ class HEADER extends Component {
                   size="lg"
                   variant="outline-white"
                   className=" btn Form-button"
-                  onClick={this.handleDownloadEvent}
+                  onClick={handleShow}
                 >
                   View Resume
-                  <Image
-                    src={linkIcon}
-                    alt="link icon"
-                    style={{ width: 15, height: 15 }}
-                  />
                 </Button>
               </a>
             </div>
+
+            <Card
+              hidden={this.state.showModal ? false : true}
+              show={this.state.showModal}
+              onHide={handleClose}
+              className={
+                this.state.showModal === true && this.state.fadeOut === false
+                  ? "text-center Modal-card fade-in"
+                  : "text-center Modal-card  fade-out"
+              }
+            >
+              {/* <ResponsiveEmbed className="Modal-resume">
+                <embed type="image/svg+xml" src={resume} />
+              </ResponsiveEmbed> */}
+              <iframe
+                title="resume"
+                type="image/svg+xml"
+                src={resume}
+                className="Modal-resume"
+              />
+              <Card.Footer className="text-muted">
+                <Button
+                  variant="outline-white"
+                  className="btn Form-button"
+                  onClick={handleClose}
+                >
+                  Close
+                </Button>
+              </Card.Footer>
+            </Card>
           </Col>
         </Row>
       </Container>
