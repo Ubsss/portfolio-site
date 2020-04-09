@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Modal,
-  Card,
-  ResponsiveEmbed,
-} from "react-bootstrap";
+import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import "./Header.css";
 import SOCIAL from "../SocialMedia/SocialMedia";
 import resume from "./Uchechukwu_Uboh.pdf";
@@ -64,7 +56,7 @@ class HEADER extends Component {
               className={
                 this.state.showModal === true && this.state.fadeOut === false
                   ? "text-center Modal-card fade-in"
-                  : "text-center Modal-card  fade-out"
+                  : "fade-out"
               }
             >
               {/* <ResponsiveEmbed className="Modal-resume">
@@ -78,6 +70,7 @@ class HEADER extends Component {
               />
               <Card.Footer className="text-muted">
                 <Button
+                  size="lg"
                   variant="outline-white"
                   className="btn Form-button"
                   onClick={handleClose}

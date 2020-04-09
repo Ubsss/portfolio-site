@@ -34,7 +34,12 @@ a:visited {
   background-color: tomato;
 }
 
+body {
+  overflow: hidden;
+}
+
 .Modal-card {
+  overflow: hidden;
   height: calc(85%);
   width: calc(85%);
   z-index: 1;
@@ -82,3 +87,5 @@ a:visited {
     opacity: 0;
   }
 }
+
+/* need to fade out background when shown and disable scrolling */
