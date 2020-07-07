@@ -52,7 +52,7 @@ class HEADER extends Component {
                   Resume
                 </Modal.Title>
               </Modal.Header>
-              <Modal.Body>
+              <Modal.Body className="w-100 h-100">
                 <iframe
                   title="resume"
                   src="https://firebasestorage.googleapis.com/v0/b/portfolio-site-8e4f6.appspot.com/o/resume%2FUchechukwu_Uboh.pdf?alt=media&token=4f655bc0-7109-4fef-a6ff-769e7fa7f835"
