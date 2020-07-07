@@ -3,6 +3,7 @@ import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import "./Header.css";
 import SOCIAL from "../SocialMedia/SocialMedia";
 import resume from "./Uchechukwu_Uboh.pdf";
+import $ from "jquery";
 
 class HEADER extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class HEADER extends Component {
     };
     const handleShow = (e) => {
       e.preventDefault();
+
       this.setState({ showModal: true });
     };
 

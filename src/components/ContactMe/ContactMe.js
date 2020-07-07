@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Image, Form, Button, Row, Col } from "react-bootstrap";
+import { Container, Image, Button, Row, Col } from "react-bootstrap";
 import linkIcon from "./link.svg";
 import "./ContactMe.css";
 
