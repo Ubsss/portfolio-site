@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import { Container, Row, Col, Button, Card, Modal } from "react-bootstrap";
 import "./Header.css";
 import SOCIAL from "../SocialMedia/SocialMedia";
-import resume from "./Uchechukwu_Uboh.pdf";
-import $ from "jquery";
 
 class HEADER extends Component {
   constructor(props) {
@@ -13,12 +11,10 @@ class HEADER extends Component {
 
   render() {
     const handleClose = () => {
-      this.setState({ fadeOut: true });
-      setTimeout(this.setState({ showModal: false, fadeOut: false }), 1000);
+      this.setState({ showModal: false, fadeOut: false });
     };
     const handleShow = (e) => {
       e.preventDefault();
-
       this.setState({ showModal: true });
     };
 
@@ -34,53 +30,36 @@ class HEADER extends Component {
                 I design, build and deploy exciting customer experiences.
               </h4>
               <SOCIAL />
-
-              <a
-                href="https://firebasestorage.googleapis.com/v0/b/portfolio-site-8e4f6.appspot.com/o/resume%2FUchechukwu_Uboh.pdf?alt=media&token=4f655bc0-7109-4fef-a6ff-769e7fa7f835"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Button
+                size="lg"
+                variant="outline-white"
+                className=" btn Form-button"
+                onClick={handleShow}
               >
-                <Button
-                  size="lg"
-                  variant="outline-white"
-                  className=" btn Form-button"
-                  onClick={handleShow}
-                >
-                  View Resume
-                </Button>
-              </a>
+                View Resume
+              </Button>
             </div>
 
-            <Card
-              hidden={this.state.showModal ? false : true}
+            <Modal
               show={this.state.showModal}
               onHide={handleClose}
-              className={
-                this.state.showModal === true && this.state.fadeOut === false
-                  ? "text-center Modal-card fade-in"
-                  : "fade-out"
-              }
+              dialogClassName="Modal-card"
+              aria-labelledby="resume-title"
+              centered
             >
-              {/* <ResponsiveEmbed className="Modal-resume">
-                <embed type="image/svg+xml" src={resume} />
-              </ResponsiveEmbed> */}
-              <iframe
-                title="resume"
-                type="image/svg+xml"
-                src={resume}
-                className="Modal-resume"
-              />
-              <Card.Footer className="text-muted">
-                <Button
-                  size="lg"
-                  variant="outline-white"
-                  className="btn Form-button"
-                  onClick={handleClose}
-                >
-                  Close
-                </Button>
-              </Card.Footer>
-            </Card>
+              <Modal.Header closeButton>
+                <Modal.Title id="resume-title" className="Modal-card-header">
+                  Resume
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <iframe
+                  title="resume"
+                  src="https://firebasestorage.googleapis.com/v0/b/portfolio-site-8e4f6.appspot.com/o/resume%2FUchechukwu_Uboh.pdf?alt=media&token=4f655bc0-7109-4fef-a6ff-769e7fa7f835"
+                  className="w-100 h-100"
+                />
+              </Modal.Body>
+            </Modal>
           </Col>
         </Row>
       </Container>

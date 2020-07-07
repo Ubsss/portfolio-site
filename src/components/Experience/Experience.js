@@ -19,7 +19,7 @@ class Event extends Component {
             roundedCircle
           />
         </Col>
-        <Col className="col-5  d-inline-block text-left text-secondary">
+        <Col className="col-5 d-inline-block text-left text-secondary">
           <p>
             <span className="Card-title">{accomplishment}</span>
             <br />
@@ -66,7 +66,7 @@ class Experience extends Component {
           </Col>
         </Row>
 
-        {ExperienceList.map(item => {
+        {ExperienceList.map((item) => {
           return <Event key={item.id} Item={item} />;
         })}
       </Container>

@@ -39,19 +39,26 @@ a:visited {
 } */
 
 .Modal-card {
-  overflow: hidden;
-  height: calc(85%);
-  width: calc(85%);
-  z-index: 1;
-  position: fixed;
-  top: 8%;
-  left: 50%;
-  transform: translateX(-50%);
+  min-width: 95%;
 }
 
-.Modal-resume {
-  height: 100%;
-  width: 100%;
+.Modal-card-header {
+  color: tomato;
+  font-size: 24px;
+}
+
+.modal-dialog,
+.modal-content {
+  height: 90%;
+}
+
+.modal-body {
+  max-height: calc(100% - 120px);
+}
+
+.close {
+  color: tomato;
+  opacity: 1;
 }
 
 .fade-in {
