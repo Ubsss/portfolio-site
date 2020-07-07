@@ -34,9 +34,9 @@ a:visited {
   background-color: tomato;
 }
 
-body {
+/* body {
   overflow: hidden;
-}
+} */
 
 .Modal-card {
   overflow: hidden;

@@ -10,11 +10,11 @@ class FOOTER extends Component {
           <Col>
             Designed and built with &#9825; by{" "}
             <a
-              href="https://www.linkedin.com/in/uchechukwu-uboh-31030196/"
+              href="https://fullstockdevelopment.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Uchechukwu Uboh
+              Full Stock Development
               <Image
                 src={linkIcon}
                 alt="link icon"
